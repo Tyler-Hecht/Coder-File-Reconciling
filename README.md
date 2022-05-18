@@ -8,5 +8,5 @@ openpyxl and pandas required
 3: Check OUTPUT folder for reconciling.xlsx file\
 4: Make edits to reconcile each trial\
 5: Run reconcile.py\
-   Mac: `python3 reconcile.py`\
-  Windows: `py reconcile.py`
+> Mac: `python3 reconcile.py`\
+> Windows: `py reconcile.py`
