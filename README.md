@@ -5,7 +5,6 @@ openpyxl and pandas required
 2: Run setup.py\
 > Mac: `python3 setup.py`\
 > Windows: `py setup.py`
-
 3: Check OUTPUT folder for reconciling.xlsx file\
 4: Make edits to reconcile each trial\
 5: Run reconcile.py\
