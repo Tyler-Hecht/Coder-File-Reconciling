@@ -5,13 +5,19 @@ import subprocess
 from openpyxl import *
 from copy import copy
 del open
-
 path = os.getcwd()
+combining_path = path + "/combining/"
+os.chdir(combining_path)
+from combining import combining
+os.chdir(path)
+
 tmp = os.getcwd()
 if os.name == "nt":
     sep = "\\"
+    pre = "python3"
 else:
     sep = "/"
+    pre = "py"
 input_path = path + "/INPUT/"
 output_path = path + "/OUTPUT/"
 combined_file = glob.glob(os.path.join(input_path, "*.xlsx"))[0].split(sep)[-1]
@@ -75,12 +81,11 @@ for i in range(0, 2):
 print("Data added successfully")
 
 # run the combining
-combining_path = path + "/combining/"
 shutil.copyfile(combined_file, combining_path + "/input/" + combined_file)
 os.chdir(combining_path)
 exec(open("catcher.py").read())
 os.chdir(combining_path)
-exec(open("combining.py").read())
+combining.main()
 os.chdir(combining_path + "/input/")
 shutil.copyfile(combined_file, output_path + combined_file)
 
