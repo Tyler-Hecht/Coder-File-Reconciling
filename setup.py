@@ -121,7 +121,7 @@ for i in range(0, 2):
     coder = sheet2.title
     locations = {}
     trial_num = 1
-    for j in range(1, sheet2.max_row):
+    for j in range(1, sheet2.max_row+1):
         cell = sheet2["A" + str(j)]
         if cell.value == "B":
             locations[trial_num] = {}
