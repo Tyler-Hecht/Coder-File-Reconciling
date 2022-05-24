@@ -102,7 +102,7 @@ for trial in trials:
 wb.save('reconciling.xlsx')
 
 # add 3rd coder trials
-for i in range(0, 4):
+for i in range(0, len(trials)):
     index = 2
     for j in range(b_locations[i], s_locations[i]+1):
         name = "Trial " + trials[i]
