@@ -56,7 +56,11 @@ third_code = glob.glob(os.path.join(output_path, "*.xls"))[0]
 os.chdir(path)
 with open('config.txt') as f:
     lines = f.readlines()
-line2 = lines[5]
+try:
+    line2 = lines[5]
+except:
+    print("No trials given in config file")
+    exit(1)
 trials_and_times = line2.split(",")
 
 trials = []
