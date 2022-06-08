@@ -13,3 +13,5 @@ openpyxl and pandas required
 > Windows: Run reconcile.bat
 
 Detailed documentation: https://docs.google.com/document/d/1MgCnEz4UF8K_F9o5Wru_PcAnZO5zrA0nhgIgykjbh0I
+
+I did not make the DatavyuToSupercoder files or most of the code for combining.py
