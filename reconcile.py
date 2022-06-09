@@ -9,7 +9,10 @@ path = os.getcwd()
 combining_path = path + "/combining/"
 os.chdir(combining_path)
 from combining import combining
+from combining import catcher
 os.chdir(path)
+import recode_finder as rf
+
 
 tmp = os.getcwd()
 if os.name == "nt":
@@ -83,8 +86,7 @@ print("Data added successfully")
 # run the combining
 shutil.copyfile(combined_file, combining_path + "/input/" + combined_file)
 os.chdir(combining_path)
-exec(open("catcher.py").read())
-os.chdir(combining_path)
+catcher.main
 combining.main()
 os.chdir(combining_path + "/input/")
 shutil.copyfile(combined_file, output_path + combined_file)
@@ -92,4 +94,4 @@ shutil.copyfile(combined_file, output_path + combined_file)
 # check for bad trials
 path = tmp
 os.chdir(path)
-exec(open("recode_finder.py").read())
+rf.main()
