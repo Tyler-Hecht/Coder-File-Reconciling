@@ -4,7 +4,7 @@ from openpyxl import load_workbook
 from pandas import *
 from openpyxl.styles import Color, PatternFill, Font, Border
 
-def main():
+def main(output_file):
     if os.name == "nt":
         sep = "\\"
     else:
@@ -37,7 +37,6 @@ def main():
     input_path_1 = path + "/OUTPUT/"
     input_path_2 = path + "/DatavyuToSupercoder/Output/"
 
-    output_file = glob.glob(os.path.join(input_path_1, "*.xlsx"))[0].split(sep)[-1]
     trials_file = glob.glob(os.path.join(input_path_2, "*.xls"))[0].split(sep)[-1]
 
     os.chdir(input_path_1)
