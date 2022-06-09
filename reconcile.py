@@ -94,4 +94,4 @@ shutil.copyfile(combined_file, output_path + combined_file)
 # check for bad trials
 path = tmp
 os.chdir(path)
-rf.main()
+rf.main(combined_file)
